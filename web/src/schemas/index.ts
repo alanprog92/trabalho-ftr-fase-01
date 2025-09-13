@@ -8,9 +8,9 @@ export const createUrlSchema = z.object({
   shortCode: z
     .string()
     .min(1, 'Código encurtado é obrigatório')
-    .regex(/^[a-zA-Z0-9-_]+$/, 'Código encurtado deve conter apenas letras, números, hífens e underscores')
-    .min(3, 'Código encurtado deve ter pelo menos 3 caracteres')
-    .max(50, 'Código encurtado deve ter no máximo 50 caracteres'),
+    .regex(/^[a-zA-Z0-9]{6,10}$/, 'Código deve conter apenas letras e números, com 6 a 10 caracteres')
+    .min(6, 'Código encurtado deve ter no mínimo 6 caracteres')
+    .max(10, 'Código encurtado deve ter no máximo 10 caracteres'),
 });
 
 export type CreateUrlFormData = z.infer<typeof createUrlSchema>;

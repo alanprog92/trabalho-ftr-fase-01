@@ -74,7 +74,7 @@ cp .env.example .env
 
 ```env
 VITE_FRONTEND_URL=http://localhost:5173
-VITE_BACKEND_URL=http://localhost:3000
+VITE_BACKEND_URL=http://localhost:3333
 ```
 
 ### Pré-requisitos
@@ -159,7 +159,7 @@ O frontend está preparado para se comunicar com uma API REST que deve implement
 - `GET /urls/:shortCode` - Buscar URL por código encurtado
 - `DELETE /urls/:id` - Deletar URL
 - `PATCH /urls/:shortCode/access` - Incrementar acesso
-- `GET /urls/report/csv` - Baixar relatório CSV
+- `GET /urls/export` - Baixar relatório CSV
 
 ## 📱 Responsividade
 

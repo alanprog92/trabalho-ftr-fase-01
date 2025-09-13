@@ -1,1 +1,68 @@
-/* Este arquivo foi limpo - estilos agora são gerenciados pelo TailwindCSS */
+/* Estilos globais para melhorar a experiência visual */
+
+/* Focus outlines for accessibility */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Melhorias para interações em dispositivos touch */
+@media (hover: hover) {
+  .hover-zoom:hover {
+    transform: scale(1.03);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Melhora de legibilidade em dispositivos móveis */
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Melhor contraste para texto */
+.text-readable {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Classes de utilitários para espaçamento */
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Melhorias para dispositivos móveis */
+@media (max-width: 640px) {
+  .mobile-full {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Estilos para feedback de toque em dispositivos móveis */
+@media (hover: none) {
+  button:active, a:active {
+    opacity: 0.7;
+  }
+}
+
+/* Animação de botões em dispositivos desktop */
+@media (hover: hover) {
+  button:not(:disabled):hover, a:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+  }
+  
+  button:not(:disabled):active, a:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
+  }
+}

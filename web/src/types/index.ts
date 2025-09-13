@@ -15,4 +15,6 @@ export interface CreateUrlResponse {
   success: boolean;
   data?: UrlData;
   error?: string;
+  suggestion?: string;
+  errorType?: 'duplicate' | 'validation' | 'server';
 }
